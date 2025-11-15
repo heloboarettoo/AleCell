@@ -1,0 +1,9 @@
+body {
+  padding-bottom: 60px;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+  flex: 1;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,6 @@
+@AleCell.API_HostAddress = http://localhost:5252
+
+GET {{AleCell.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
