@@ -1,4 +1,5 @@
 using AleCell.UI.Middleware;
+using AleCell.UI;
 using AleCell.UI.Models;
 using AleCell.UI.Services.Implementations;
 using AleCell.UI.Services.Interfaces;
@@ -48,8 +49,16 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddHttpContextAccessor();
 
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+
 // Serviços de API
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<ILojaService, LojaService>();
+
+
 
 var app = builder.Build();
 

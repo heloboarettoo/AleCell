@@ -47,7 +47,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
             new Usuario(){
                 Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                 Email = "helooboarettoo@gmail.com",
-                NormalizedEmail = "HELOOBOARETTO@GMAIL.COM",
+                NormalizedEmail = "HELOOBOARETTOO@GMAIL.COM",
                 UserName = "heloboaretto",
                 NormalizedUserName = "HELOBOARETTO",
                 LockoutEnabled = true,

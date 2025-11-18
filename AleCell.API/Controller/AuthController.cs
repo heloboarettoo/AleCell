@@ -78,4 +78,3 @@ public class AuthController : ControllerBase
         return Ok(new { message = "Token válido", isValid = true });
     }
 }
-

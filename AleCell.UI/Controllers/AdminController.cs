@@ -24,3 +24,4 @@ public class AdminController : Controller
         return View("Error!");
     }
 }
+
