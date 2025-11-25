@@ -8,9 +8,10 @@ public class Produto
     [Key]
     public int Id { get; set; }
 
-    [ForeignKey("CategoriaId")]
+    [Required]
     public int CategoriaId { get; set; }
-    public Categoria Categoria;
+    [ForeignKey("CategoriaId")]
+    public Categoria Categoria {get; set; }
 
    [Required(ErrorMessage ="O nome é obrigatório")]
    [StringLength(100)] 

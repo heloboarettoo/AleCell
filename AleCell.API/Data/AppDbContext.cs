@@ -90,7 +90,8 @@ public class AppDbContext : IdentityDbContext<Usuario>
             new Categoria() {
                 Id = 2,
                 Nome = "Xiaomi",
-                Foto = "/img/categorias/2.jpg"
+                Foto = "/img/categorias/2.jpg",
+                Cor = ""
             },
         };
         builder.Entity<Categoria>().HasData(categorias);
@@ -105,56 +106,57 @@ public class AppDbContext : IdentityDbContext<Usuario>
                 Nome = "Iphone 17",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/iphone-17/.jpg"
+                Foto = "/img/Produtos/iphone-17.jpg",
+                Destaque = true
             },
             new Produto() {
                 Id = 2,
                 Nome = "Iphone 17 pro max",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/iphone-17pro/.jpg"
+                Foto = "/img/Produtos/iphone-17pro.jpg"
             },
             new Produto() {
                 Id = 3,
                 Nome = "Iphone Air",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/iphone-air/.jpg"
+                Foto = "/img/Produtos/iphone-air.jpg"
             },
             new Produto() {
                 Id = 4,
                 Nome = "Iphone 16",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/iphone16/.jpg"
+                Foto = "/img/Produtos/iphone16.jpg"
             },
             new Produto() {
                 Id = 5,
                 Nome = "Iphone 16e",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/iphone16e/.jpg"
+                Foto = "/img/Produtos/iphone16e.jpg"
             },
             new Produto() {
                 Id = 6,
                 Nome = "Xiaomi 15T",
                 Descricao = " ",
                 CategoriaId = 2,
-                Foto = "/img/xiaomi15T/.jpg"
+                Foto = "/img/Produtos/xiaomi15T.jpg"
             },
             new Produto() {
                 Id = 7,
                 Nome = "Xiaomi 17 pro",
                 Descricao = " ",
                 CategoriaId = 2,
-                Foto = "/img/xiaomi17pro/.jpg"
+                Foto = "/img/Produtos/xiaomi17pro.jpg"
             },
             new Produto() {
                 Id = 8,
                 Nome = "XRedmi 15C",
                 Descricao = " ",
                 CategoriaId = 2,
-                Foto = "/img/Xredmi15C/.jpg"
+                Foto = "/img/Produtos/Xredmi15C.jpg"
             },
         };
         builder.Entity<Produto>().HasData(produtos);
