@@ -104,7 +104,7 @@ public class AppDbContext : IdentityDbContext<Usuario>
             new Produto() {
                 Id = 1,
                 Nome = "Iphone 17",
-                Descricao = " ",
+                Descricao = "oi ",
                 CategoriaId = 1,
                 Foto = "/img/Produtos/iphone-17.jpg",
                 Destaque = true
@@ -114,12 +114,13 @@ public class AppDbContext : IdentityDbContext<Usuario>
                 Nome = "Iphone 17 pro max",
                 Descricao = " ",
                 CategoriaId = 1,
-                Foto = "/img/Produtos/iphone-17pro.jpg"
+                Foto = "/img/Produtos/iphone-17pro.jpg",
+                Destaque = true 
             },
             new Produto() {
                 Id = 3,
                 Nome = "Iphone Air",
-                Descricao = " ",
+                Descricao = "  ",
                 CategoriaId = 1,
                 Foto = "/img/Produtos/iphone-air.jpg"
             },
@@ -149,7 +150,9 @@ public class AppDbContext : IdentityDbContext<Usuario>
                 Nome = "Xiaomi 17 pro",
                 Descricao = " ",
                 CategoriaId = 2,
-                Foto = "/img/Produtos/xiaomi17pro.jpg"
+                Foto = "/img/Produtos/Xiaomi17ProMax.jpg",
+                Destaque = true 
+
             },
             new Produto() {
                 Id = 8,
@@ -157,6 +160,20 @@ public class AppDbContext : IdentityDbContext<Usuario>
                 Descricao = " ",
                 CategoriaId = 2,
                 Foto = "/img/Produtos/Xredmi15C.jpg"
+            },
+             new Produto() {
+                Id = 9,
+                Nome = "Redmi 14 Pro",
+                Descricao = " ",
+                CategoriaId = 2,
+                Foto = "/img/Produtos/redmi14pro.jpg"
+            },
+             new Produto() {
+                Id = 10,
+                Nome = "Poco x7 Pro",
+                Descricao = " ",
+                CategoriaId = 2,
+                Foto = "/img/Produtos/pocox7pro.jpg"
             },
         };
         builder.Entity<Produto>().HasData(produtos);
