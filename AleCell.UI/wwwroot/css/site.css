@@ -48,8 +48,11 @@ main {
 }
 
 /* Hero section com fundo fixo */
-.bg-primary {
-  background-color: #06701d !important;
+bg-primary {
+  background-image: url("Imagem-baner.png");
+  background-size: cover; /* Faz a imagem cobrir toda a área da seção */
+  background-position: center center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Garante que a imagem não seja repetida */
 }
 
 /* Cards de produtos */

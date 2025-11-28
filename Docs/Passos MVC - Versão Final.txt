@@ -5104,7 +5104,7 @@ public class HomeController : Controller
 
 
 
-75. Criar na pasta Views\Home\ o arquivo Produtos.cshtml:
+75. Criar na pasta Views\Home\ o arquivo Detalhes.cshtml:
 @model AleCell.UI.DTOs.ProdutoDto
 @{
     ViewData["Title"] = Model.Nome;

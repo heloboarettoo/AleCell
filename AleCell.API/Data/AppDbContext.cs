@@ -7,6 +7,8 @@ namespace AleCell.API.Data;
 
 public class AppDbContext : IdentityDbContext<Usuario>
 {
+    private const double V = 3.000;
+
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }
@@ -85,13 +87,13 @@ public class AppDbContext : IdentityDbContext<Usuario>
                 Id = 1,
                 Nome = "Iphone",
                 Foto = "/img/categorias/1.jpg",
-                Cor = ""
+                Cor = " "
             },
             new Categoria() {
                 Id = 2,
                 Nome = "Xiaomi",
                 Foto = "/img/categorias/2.jpg",
-                Cor = ""
+                Cor = " "
             },
         };
         builder.Entity<Categoria>().HasData(categorias);
@@ -104,76 +106,144 @@ public class AppDbContext : IdentityDbContext<Usuario>
             new Produto() {
                 Id = 1,
                 Nome = "Iphone 17",
-                Descricao = "oi ",
+                Descricao = "256GB de armazenamento interno;\n" +
+                "Tamanho da tela: 6,3 polegadas;\n" +
+                "Câmera traseira: 48MP;\n" +
+                "Câmera frontal: 18MP;\n" + 
+                "Bateria de íon de lítio;\n" +
+                "Com 5G",
                 CategoriaId = 1,
+                ValorVenda = 8798,
                 Foto = "/img/Produtos/iphone-17.jpg",
+                Qtde = 100,
                 Destaque = true
             },
             new Produto() {
                 Id = 2,
                 Nome = "Iphone 17 pro max",
-                Descricao = " ",
+                Descricao = "256GB de armazenamento interno;\n" +
+                "Tamanho da tela: 6,3 polegadas;\n" +
+                "Câmera traseira: 48MP;\n" +
+                "Câmera frontal: 18MP;\n" +
+                "Bateria interna de íon de lítio;\n" +
+                "Com 5G",
                 CategoriaId = 1,
+                ValorVenda = 10450,
                 Foto = "/img/Produtos/iphone-17pro.jpg",
+                Qtde = 100,
                 Destaque = true 
             },
             new Produto() {
                 Id = 3,
                 Nome = "Iphone Air",
-                Descricao = "  ",
+                Descricao = "512GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,5 polegadas;\n" +
+                "Câmera traseira: 48MP;\n" +
+                "Câmera frontal: 18MP;\n" +
+                "Bateria interna de íon de lítio;\n" +
+                "Com 5G",
                 CategoriaId = 1,
-                Foto = "/img/Produtos/iphone-air.jpg"
+                ValorVenda = 11400,
+                Foto = "/img/Produtos/iphone-air.jpg",
+                Qtde = 100
             },
             new Produto() {
                 Id = 4,
                 Nome = "Iphone 16",
-                Descricao = " ",
+                Descricao =  "128GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,1 polegadas;\n" +
+                "Câmera traseira: 48MP;\n" +
+                "Câmera frontal: 12MP;\n" +
+                "Bateria Interna Recarregável de íon de lítios;\n" +
+                "Com 5G",
                 CategoriaId = 1,
-                Foto = "/img/Produtos/iphone16.jpg"
+                ValorVenda = 4780,
+                Foto = "/img/Produtos/iphone16.jpg",
+                Qtde = 100
             },
             new Produto() {
                 Id = 5,
                 Nome = "Iphone 16e",
-                Descricao = " ",
+                Descricao = "128GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,1 polegadas;\n" +
+                "Câmera traseira: 48MP;\n" +
+                "Câmera frontal: 12MP;\n" +
+                "Bateria Interna Recarregável de íon de lítios;\n" +
+                "Com 5G",
                 CategoriaId = 1,
-                Foto = "/img/Produtos/iphone16e.jpg"
+                ValorVenda = 3494,
+                Foto = "/img/Produtos/iphone16e.jpg",
+                Qtde = 100
             },
             new Produto() {
                 Id = 6,
                 Nome = "Xiaomi 15T",
-                Descricao = " ",
+                Descricao = "512GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,8 polegadas;\n" +
+                "Câmera traseira: 50MP;\n" +
+                "Câmera frontal: 32MP;\n" +
+                "Bateria 5500 mAh;\n" +
+                "12 GB de memória RAM",
                 CategoriaId = 2,
-                Foto = "/img/Produtos/xiaomi15T.jpg"
+                ValorVenda = 4950,
+                Foto = "/img/Produtos/xiaomi15T.jpg",
+                Qtde = 100
             },
             new Produto() {
                 Id = 7,
                 Nome = "Xiaomi 17 pro",
-                Descricao = " ",
+                Descricao = "512GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,9 polegadas;\n" +
+                "Câmera traseira: 50MP;\n" +
+                "Câmera frontal: 50 MP;",
                 CategoriaId = 2,
+                ValorVenda = 11799,
                 Foto = "/img/Produtos/Xiaomi17ProMax.jpg",
+                Qtde = 100,
                 Destaque = true 
 
             },
             new Produto() {
                 Id = 8,
                 Nome = "XRedmi 15C",
-                Descricao = " ",
+                Descricao = "256GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,9 polegadas;\n" +
+                "Câmera traseira: 50MP;\n" +
+                "Câmera frontal: 8MP;\n" +
+                "Bateria 6000 mAh;\n" +
+                "8GB de memória RAM",
                 CategoriaId = 2,
-                Foto = "/img/Produtos/Xredmi15C.jpg"
+                ValorVenda = 1450,
+                Foto = "/img/Produtos/Xredmi15C.jpg",
+                Qtde = 100
             },
              new Produto() {
                 Id = 9,
                 Nome = "Redmi 14 Pro",
-                Descricao = " ",
+                Descricao = "256GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,67 polegadas;\n" +
+                "Câmera traseira: 200MP;\n" +
+                "Câmera frontal: 32MP;\n" +
+                "Bateria 5500mAh;\n" +
+                "8GB de memória RAM",
                 CategoriaId = 2,
-                Foto = "/img/Produtos/redmi14pro.jpg"
+                ValorVenda = 1752,
+                Foto = "/img/Produtos/redmi14pro.jpg",
+                Qtde = 100
             },
              new Produto() {
                 Id = 10,
                 Nome = "Poco x7 Pro",
-                Descricao = " ",
+                Descricao =  "256GB de armazenamento interno;\n" +
+                "Tamanho da Tela: 6,67 polegadas;\n" +
+                "Câmera traseira: 50MP;\n" +
+                "Câmera frontal: 20MP;\n" +
+                "Bateria 6000mAh;\n" +
+                "8GB de memória RAM",
                 CategoriaId = 2,
-                Foto = "/img/Produtos/pocox7pro.jpg"
+                ValorVenda = 2220,
+                Foto = "/img/Produtos/pocox7pro.jpg",
+                Qtde = 100
             },
         };
         builder.Entity<Produto>().HasData(produtos);
